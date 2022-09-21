@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last, sized_box_for_whitespace
 import 'package:e_soccer_app/authentication/signin.dart';
+import 'package:e_soccer_app/authentication/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -120,7 +121,7 @@ class WelcomePage extends StatelessWidget {
                               width: 300,
                               height: 55,
                               child: OutlinedButton(
-                                onPressed: null,
+                                onPressed: () => Get.to(RegisterPage()),
                                 child: Text(
                                   "SING UP!",
                                   style: GoogleFonts.poppins(
