@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, avoid_print
 
+import 'package:e_soccer_app/authentication/confirmation.dart';
 import 'package:e_soccer_app/authentication/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -146,7 +147,7 @@ class _LoginPageState extends State<LoginPage> {
                           ShortLinks(
                             text1: 'Forgot th password?',
                             text2: 'Re-Create',
-                            onTapAction: () => print("Null Action"),
+                            onTapAction: () => Get.to(ConfirmationPage()),
                           ),
                           SizedBox(height: 15),
                           Container(

@@ -8,3 +8,4 @@ const kGoogleColor = Color(0xFFDB4437);
 const kGoogleBorderColor = Color(0xFF9C2116);
 const kFacebookColor = Color(0xFF3B5998);
 const kFacebookBorderColor = Color(0xFF112A60);
+const krEDlIGHTBorderColor = Color(0xFFFAD3CF);
