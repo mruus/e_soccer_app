@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 class Product {
   final int? id;
   final String? title;
@@ -10,7 +12,11 @@ class Product {
   final String? category;
   final String? thumbnail;
   final List? images;
-  int totalRequest = 0;
+  final isCarted = false.obs;
+
+  // setIsCarted(bool cart) {
+  //   this.isCarted = cart;
+  // }
 
   Product({
     this.id,
