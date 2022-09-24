@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_state/views/product_cards.dart';
+import 'package:getx_state/views/product_details.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../controller/cart_controller.dart';
@@ -97,7 +98,27 @@ class CartList extends StatelessWidget {
                                         child: Text("Remove From Cart"),
                                         style: ElevatedButton.styleFrom(
                                           backgroundColor: Colors.red,
-                                          fixedSize: Size(324, 50),
+                                          fixedSize: Size(250, 50),
+                                        ),
+                                      ),
+                                      ElevatedButton(
+                                        onPressed: () {
+                                          cartController.productID.value =
+                                              controller.cartItems[index].id
+                                                  .toString();
+                                          Get.to(() => ProductDetails());
+                                          // var x = cartController.findProdect(
+                                          //     cartController.productID
+                                          //         .toString());
+                                          // print(x.id);
+                                        },
+                                        child: Icon(
+                                          Icons.remove_red_eye_rounded,
+                                          color: Colors.white,
+                                        ),
+                                        style: ElevatedButton.styleFrom(
+                                          fixedSize: Size(20, 50),
+                                          backgroundColor: Colors.green,
                                         ),
                                       ),
                                     ],

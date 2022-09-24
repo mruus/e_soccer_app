@@ -1,4 +1,4 @@
-// ignore_for_file: unrelated_type_equality_checks
+// ignore_for_file: unrelated_type_equality_checks, avoid_print
 
 import 'package:get/get.dart';
 
@@ -7,6 +7,7 @@ import '../modules/product_cards.dart';
 class CartController extends GetxController {
   var cartItems = <Product>[].obs;
   int get totalItems => cartItems.length;
+  final productID = 'None'.obs;
 
   addProduct(Product cartItem) {
     if (cartItem.isCarted == false) {
@@ -18,13 +19,11 @@ class CartController extends GetxController {
     cartItems.removeWhere((element) => element.id == cartItem.id);
   }
 
-  // removeCart(Product cartItem) {
-  //   if (cartItem.totalRequest == 0) {
-  //     noDuplicatecartItems.removeWhere((item) => item.id == cartItem.id);
-  //   }
-  //   cartItems.remove(cartItem);
-  //   cartItem.totalRequest--;
-  // }
+  findProdect(String id) {
+    List<Product> product =
+        cartItems.where((element) => element.id == int.parse(id)).toList();
+    return product[0];
+  }
 
   getTotalRequest(Product cartItem) {
     return cartItem.isCarted;
